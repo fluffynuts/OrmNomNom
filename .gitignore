@@ -5,3 +5,5 @@ source/OrmNomNom.Domain/obj/
 source/OrmNomNom/bin/
 source/OrmNomNom/obj/
 source/packages/
+*.user
+*.suo
