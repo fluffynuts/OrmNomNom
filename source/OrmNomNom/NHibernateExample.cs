@@ -215,7 +215,7 @@ namespace OrmNomNom
                                                                     .ShowSql())
                            .Mappings(m => m.AutoMappings.Add(AutoMap.AssemblyOf<Log>()
                                                                     .UseOverridesFromAssemblyOf<Log>()
-                                                                    .Where(t => t != typeof(SomeNonEntity))))
+                                                                    .Where(t => t != typeof(SomeNonEntity) && t != typeof(NomContext))))
                            .BuildSessionFactory();
         }
 
@@ -226,7 +226,7 @@ namespace OrmNomNom
                                                                      .ShowSql())
                            .Mappings(m => m.AutoMappings.Add(AutoMap.AssemblyOf<Log>()
                                                                     .UseOverridesFromAssemblyOf<Log>()
-                                                                    .Where(t => t != typeof(SomeNonEntity))))
+                                                                    .Where(t => t != typeof(SomeNonEntity) && t != typeof(NomContext))))
                            .BuildSessionFactory();
         }
     }
