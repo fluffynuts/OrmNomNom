@@ -68,3 +68,7 @@ OrmNomNom notes:
 otherwise entity gets confused about which provider to use, since I have
 several defined in the config file. You may not have to follow this approach
 if you only use one provider type
+
+9) If you're using Sqlite for backing (file or in-memory) against Entity, you will have to
+    store integer values as LONGs since otherwise retrieval results in a failure as the
+    stored values are pulled up as int64 and then can't be applied to your int32 properties.
